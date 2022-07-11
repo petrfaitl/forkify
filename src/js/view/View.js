@@ -42,7 +42,7 @@ export default class View {
 
   _generateMarkup() {
   }
-  
+
 
   renderSpinner() {
     const markup = `
@@ -62,7 +62,7 @@ export default class View {
     <div class='error'>
         <div>
           <svg>
-            <use href='${icons}/icons.svg#icon-alert-triangle'></use>
+            <use href='${icons}#icon-alert-triangle'></use>
           </svg>
         </div>
         <p>${message}</p>
