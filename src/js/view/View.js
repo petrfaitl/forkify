@@ -42,9 +42,7 @@ export default class View {
 
   _generateMarkup() {
   }
-
-  _userGeneratedRecipe() {
-  }
+  
 
   renderSpinner() {
     const markup = `
