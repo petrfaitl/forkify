@@ -18,7 +18,9 @@ class SearchView {
   }
 
   #clearInput() {
+    this._parentElement.querySelector('.search__field').blur();
     this._parentElement.querySelector('.search__field').value = '';
+
   }
 }
 

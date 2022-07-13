@@ -41,13 +41,11 @@
 
   @media only screen and (max-width: $bp-small) {
     margin-right: 2rem;
-    width: 20rem;
-    transition: width 2s;
+    //width: 20rem;
+    //transition: width 1s;
     overflow: visible;
 
-    &:hover, &:active {
-      width: 80vw;
-    }
+
   }
 
   &__field {
@@ -66,8 +64,9 @@
       color: $color-grey-light-3;
     }
 
+
     @media only screen and (max-width: $bp-medium) {
-      width: auto;
+      width: 100%;
 
       &::placeholder {
         //color: white;
@@ -75,11 +74,15 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-      width: 100%;
       overflow: clip;
+      transition: width 1s;
+      width: 10rem;
+
+      &:focus-visible {
+        width: 50vw;
+      }
 
     }
-
 
   }
 
@@ -190,3 +193,8 @@
     opacity: 1;
   }
 }
+
+//*:focus-visible {
+//  border: 2px solid red;
+//
+//}
