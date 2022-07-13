@@ -7,8 +7,20 @@
 
   &__logo {
     margin-left: 4rem;
+    margin-right: 4rem;
     height: 4.6rem;
     display: block;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-left: 8rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+
+    display: grid;
+    grid-template-columns: fit-content(100%) 20rem;
+    grid-auto-rows: auto;
   }
 }
 
@@ -19,10 +31,23 @@
   align-items: center;
   padding-left: 3rem;
   transition: all 0.3s;
+  justify-self: end;
+  justify-content: end;
 
   &:focus-within {
     transform: translateY(-2px);
     box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 2rem;
+    width: 20rem;
+    transition: width 2s;
+    overflow: visible;
+
+    &:hover, &:active {
+      width: 80vw;
+    }
   }
 
   &__field {
@@ -45,14 +70,32 @@
       width: auto;
 
       &::placeholder {
-        color: white;
+        //color: white;
       }
     }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+      overflow: clip;
+
+    }
+
+
   }
 
   &__btn {
     font-weight: 600;
     font-family: inherit;
+
+    @media only screen and (max-width: $bp-small) {
+      span {
+        display: none;
+
+      }
+      .search__icon {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -101,6 +144,11 @@
     &:hover {
       background-color: $color-grey-light-2;
     }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1/-1;
+    justify-self: center;
   }
 }
 
