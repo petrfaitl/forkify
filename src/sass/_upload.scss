@@ -12,6 +12,16 @@
   z-index: 1000;
   transition: all 0.5s;
 
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    transform: unset;
+
+  }
+
   .btn--close-modal {
     font-family: inherit;
     color: inherit;
@@ -49,11 +59,20 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
 
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+  }
+
   &__column {
     display: grid;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
     gap: 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+    }
+
 
     & label {
       font-size: 1.5rem;
